@@ -4,5 +4,9 @@
   "SNAKEBITE-SNAKEBITE_TIME.title": "蛇咬时间",
   "SNAKEBITE-SNAKEBITE_TIME.description": "本回合，你的所有[gold]蛇咬[/gold]费用变为0。",
   "SNAKEBITE-SNAKEBITETIME.title": "蛇咬时间",
-  "SNAKEBITE-SNAKEBITETIME.description": "本回合，你的所有[gold]蛇咬[/gold]费用变为0。"
+  "SNAKEBITE-SNAKEBITETIME.description": "本回合，你的所有[gold]蛇咬[/gold]费用变为0。",
+  "SNAKEBITE-SNAKEBITE_FAN.title": "蛇咬扇",
+  "SNAKEBITE-SNAKEBITE_FAN.description": "获得1层[gold]蛇咬扇[/gold]。将{Cards:diff()}张[gold]蛇咬[/gold]加入你的手牌。",
+  "SNAKEBITE-SNAKEBITEFAN.title": "蛇咬扇",
+  "SNAKEBITE-SNAKEBITEFAN.description": "获得1层[gold]蛇咬扇[/gold]。将{Cards:diff()}张[gold]蛇咬[/gold]加入你的手牌。"
 }
