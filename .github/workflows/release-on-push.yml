@@ -1,0 +1,42 @@
+name: Release On Push
+
+on:
+  push:
+    branches:
+      - '**'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute safe branch name
+        shell: bash
+        run: |
+          BRANCH_SAFE="${GITHUB_REF_NAME//\//-}"
+          echo "BRANCH_SAFE=$BRANCH_SAFE" >> "$GITHUB_ENV"
+
+      - name: Validate release files
+        run: |
+          test -f snakebite.dll
+          test -f snakebite.json
+          test -f snakebite.pck
+
+      - name: Create release and upload assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ci-${{ env.BRANCH_SAFE }}-${{ github.run_number }}
+          name: CI ${{ github.ref_name }} #${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          prerelease: true
+          generate_release_notes: true
+          files: |
+            snakebite.dll
+            snakebite.json
+            snakebite.pck

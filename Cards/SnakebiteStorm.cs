@@ -33,7 +33,7 @@ public sealed class SnakebiteStorm : CustomCardModel
         }
     }
 
-    public SnakebiteStorm() : base(1, CardType.Skill, CardRarity.Rare, TargetType.Self)
+    public SnakebiteStorm() : base(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
     {
     }
 

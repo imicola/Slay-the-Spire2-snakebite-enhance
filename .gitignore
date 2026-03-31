@@ -48,4 +48,8 @@ ai-memory/
 snakebite.csproj
 
 # Local backup/example copy not intended for versioning
-*.csproj.exmple
+*.csproj.example
+
+# temp files
+*.tmp
+tmp/
